@@ -33,4 +33,9 @@ class Ticket
      * @var int Amount of money paid for the ticket
      */
     public int $price;
+
+    /**
+     * @var string Id of the ticket purchasing transaction in the payment service
+     */
+    public string $paymentId;
 }
