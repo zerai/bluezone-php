@@ -1,0 +1,63 @@
+{
+    "name": "zerai/bluezone-php",
+    "type": "project",
+    "description": "Bluezone php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zerai Teclai",
+            "email": "teclaizerai@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "psr/clock": "^1.0",
+        "psr/container": "^2.0",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.8",
+        "phpunit/phpunit": "^11.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
+        },
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "bamarni-bin": {
+            "bin-links": true,
+            "forward-command": false,
+            "target-directory": "tools"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Bluezone\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bluezone\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "cs": "./vendor/bin/ecs",
+        "cs:fix": "./vendor/bin/ecs --fix",
+        "rc": "./vendor/bin/rector --dry-run",
+        "rc:fix": "./vendor/bin/rector"
+    },
+    "scripts-descriptions": {
+        "cs": "Check php coding style",
+        "cs:fix": "Fix php coding style",
+        "rc": "Check rector rules",
+        "rc:fix": "Fix rector issues"
+    }
+}
