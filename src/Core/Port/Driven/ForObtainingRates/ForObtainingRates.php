@@ -9,6 +9,8 @@ interface ForObtainingRates
 {
     public function findAll(): array;
 
+    public function findByName(string $rateName): Rate;
+
     public function addRate(Rate $rate): void;
 
     public function exists(string $rateName): bool;
