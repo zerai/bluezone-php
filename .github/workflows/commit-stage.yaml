@@ -93,13 +93,12 @@ jobs:
         if: always()
         run: |
           ./vendor/bin/ecs --ansi
-#
-#      - name: Run psalm STATIC ANALYSIS
-#        if: always()
-#        run: |
-#          ./bin/console lint:container -e dev --ansi
-#          ./vendor/bin/psalm
-#
+
+      - name: Run psalm STATIC ANALYSIS
+        if: always()
+        run: |
+          ./vendor/bin/psalm
+
       - name: Run rector MAINTENANCE
         if: always()
         run: |

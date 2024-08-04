@@ -52,12 +52,16 @@
         "cs": "./vendor/bin/ecs",
         "cs:fix": "./vendor/bin/ecs --fix",
         "rc": "./vendor/bin/rector --dry-run",
-        "rc:fix": "./vendor/bin/rector"
+        "rc:fix": "./vendor/bin/rector",
+        "sa": "./vendor/bin/psalm",
+        "sa:baseline": "./vendor/bin/psalm --set-baseline=psalm-baseline.xml"
     },
     "scripts-descriptions": {
         "cs": "Check php coding style",
         "cs:fix": "Fix php coding style",
         "rc": "Check rector rules",
-        "rc:fix": "Fix rector issues"
+        "rc:fix": "Fix rector issues",
+        "sa": "Check static analysis (psalm)",
+        "sa:baseline": "Update static analysis baseline."
     }
 }
