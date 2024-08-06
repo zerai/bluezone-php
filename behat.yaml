@@ -1,0 +1,14 @@
+default:
+  translation:
+    locale: en
+  formatters:
+    pretty: true
+  gherkin:
+    filters:
+      tags: ~@wip
+  suites:
+    core:
+      paths:
+        - tests/Bdd/Core/features
+      contexts:
+        - Bluezone\Tests\Bdd\Core\Context\FeatureContext
