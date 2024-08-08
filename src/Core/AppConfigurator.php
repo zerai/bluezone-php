@@ -24,7 +24,7 @@ class AppConfigurator implements ForConfiguringApp
         $this->rateProvider->empty();
         /** @var Rate $rate */
         foreach ($rates as $rate) {
-            if (! $this->rateProvider->exists($rate->name)) {
+            if (! $this->rateProvider->exists($rate->getName())) {
                 $this->rateProvider->addRate($rate);
             }
         }

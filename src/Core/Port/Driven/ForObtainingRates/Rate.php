@@ -4,7 +4,19 @@ namespace Bluezone\Core\Port\Driven\ForObtainingRates;
 
 class Rate
 {
-    public string $name;
+    public function __construct(
+        private readonly string $name,
+        private readonly int|float $amountPerHour
+    ) {
+    }
 
-    public int $amountPerHour;
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getAmountPerHour(): int|float
+    {
+        return $this->amountPerHour;
+    }
 }

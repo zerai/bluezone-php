@@ -41,9 +41,7 @@ class ForParkingCarScenarioContext implements Context
     {
         $rates = [];
         foreach ($rateTable as $row) {
-            $rate = new Rate();
-            $rate->name = $row['name'];
-            $rate->amountPerHour = (int) $row['amountPerHour'];
+            $rate = new Rate($row['name'], (int) $row['amountPerHour']);
             $rates[] = $rate;
         }
 
@@ -57,9 +55,7 @@ class ForParkingCarScenarioContext implements Context
     {
         $rates = [];
         foreach ($rateTable as $row) {
-            $rate = new Rate();
-            $rate->name = $row['name'];
-            $rate->amountPerHour = (int) $row['amountPerHour'];
+            $rate = new Rate($row['name'], (int) $row['amountPerHour']);
             $rates[$row['name']] = $rate;
         }
 

@@ -9,15 +9,14 @@ class RateCalculator
     public function __construct(
         private readonly Rate $rate
     ) {
-
     }
 
     public function getUntilGivenAmount(\DateTimeImmutable $from, int $amount): \DateTimeImmutable
     {
         // minutes = (amount*60)/amountPerHour
         // int minutes = (int) ((amount.doubleValue()*60.0) / this.rate.getAmountPerHour().doubleValue())
-        $minutes = (int) (($amount * 60.0) / $this->rate->amountPerHour);
+        $minutes = (int) (($amount * 60.0) / $this->rate->getAmountPerHour());
 
-        return $from->add(\DateInterval::createFromDateString('PT' . $minutes . 'M'));
+        return $from->add(\DateInterval::createFromDateString($minutes . ' minutes'));
     }
 }
