@@ -11,4 +11,4 @@ default:
       paths:
         - tests/Bdd/Core/features
       contexts:
-        - Bluezone\Tests\Bdd\Core\Context\FeatureContext
+        - Bluezone\Tests\Bdd\Core\Context\ForParkingCarScenarioContext

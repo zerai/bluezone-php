@@ -9,7 +9,7 @@ Feature: Get all rates by name
   SO THAT
   I can choose the rate name of the zone I want to park the car at
 
-  @wip
+
   Scenario: BLUE, GREEN and ORANGE rates
 
     Given there are the following rates at rate repository:
@@ -21,7 +21,7 @@ Feature: Get all rates by name
     When I ask for getting all rates by name
 
     Then I should obtain the following rates indexed by name:
-      |             | name        | amountPerHour |
+      | index            | name        | amountPerHour |
       | BLUE_ZONE   | BLUE_ZONE   | 0.80          |
       | GREEN_ZONE  | GREEN_ZONE  | 1.20          |
       | ORANGE_ZONE | ORANGE_ZONE | 0.95          |
