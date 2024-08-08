@@ -17,6 +17,6 @@ class RateCalculator
         // int minutes = (int) ((amount.doubleValue()*60.0) / this.rate.getAmountPerHour().doubleValue())
         $minutes = (int) (($amount * 60.0) / $this->rate->getAmountPerHour());
 
-        return $from->add(\DateInterval::createFromDateString('PT' . $minutes . 'M'));
+        return $from->add(\DateInterval::createFromDateString($minutes . ' minutes'));
     }
 }
