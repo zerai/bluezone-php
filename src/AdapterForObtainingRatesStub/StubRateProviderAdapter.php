@@ -24,7 +24,7 @@ class StubRateProviderAdapter implements ForObtainingRates
         $rateFound = null;
         /** @var Rate $rate */
         foreach ($this->rates as $rate) {
-            if ($rate->name === $rateName) {
+            if ($rate->getName() === $rateName) {
                 $rateFound = $rate;
                 $occurrences++;
             }
@@ -40,8 +40,8 @@ class StubRateProviderAdapter implements ForObtainingRates
 
     public function addRate(Rate $rate): void
     {
-        if ($this->exists($rate->name)) {
-            throw new RuntimeException("Cannot add rate to repository. Rate name '" . $rate->name . "' already exists.");
+        if ($this->exists($rate->getName())) {
+            throw new RuntimeException("Cannot add rate to repository. Rate name '" . $rate->getName() . "' already exists.");
         }
         $this->rates[] = $rate;
     }
@@ -51,7 +51,7 @@ class StubRateProviderAdapter implements ForObtainingRates
         $result = false;
         /** @var Rate $rate */
         foreach ($this->rates as $rate) {
-            if ($rate->name === $rateName) {
+            if ($rate->getName() === $rateName) {
                 $result = true;
             }
         }

@@ -25,7 +25,7 @@ class CarParker implements ForParkingCars
         $allRates = $this->rateProvider->findAll();
 
         foreach ($allRates as $rate) {
-            $allRatesByName[$rate->name] = $rate;
+            $allRatesByName[$rate->getName()] = $rate;
         }
 
         return $allRatesByName;
