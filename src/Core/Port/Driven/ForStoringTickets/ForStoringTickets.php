@@ -9,7 +9,7 @@ interface ForStoringTickets
 {
     public function nextCode(): string;
 
-    public function findByCode(string $ticketCode): Ticket;
+    public function findByCode(string $ticketCode): ?Ticket;
 
     public function store(Ticket $ticket): void;
 
