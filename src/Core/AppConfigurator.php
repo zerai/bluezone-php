@@ -33,7 +33,7 @@ class AppConfigurator implements ForConfiguringApp
 
     public function createTicket(Ticket $ticket): void
     {
-        if (! $this->ticketStore->exists($ticket->code)) {
+        if (! $this->ticketStore->exists($ticket->getCode())) {
             $this->ticketStore->store($ticket);
         }
     }
