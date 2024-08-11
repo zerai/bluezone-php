@@ -35,10 +35,10 @@ class FakeAdapterForStoringTickets implements ForStoringTickets
 
     public function store(Ticket $ticket): void
     {
-        if ($this->exists($ticket->code)) {
-            throw new \RuntimeException("Cannot store ticket. Code '" . $ticket->code . "' already exists.");
+        if ($this->exists($ticket->getCode())) {
+            throw new \RuntimeException("Cannot store ticket. Code '" . $ticket->getCode() . "' already exists.");
         }
-        $this->ticketsByCode[$ticket->code] = $ticket;
+        $this->ticketsByCode[$ticket->getCode()] = $ticket;
 
     }
 
@@ -60,7 +60,7 @@ class FakeAdapterForStoringTickets implements ForStoringTickets
         $result = false;
         /** @var Ticket $ticket */
         foreach ($this->ticketsByCode as $ticket) {
-            if ($ticket->code === $ticketCode) {
+            if ($ticket->getCode() === $ticketCode) {
                 $result = true;
             }
         }
