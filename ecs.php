@@ -16,6 +16,7 @@ return ECSConfig::configure()
         __DIR__ . '/tests',
         __DIR__ . '/ecs.php',
         __DIR__ . '/rector.php',
+        __DIR__ . '/phparkitect.php',
     ])
 
     ->withSkip([

@@ -51,6 +51,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "scripts": {
+        "ark": "./vendor/bin/phparkitect check",
         "cs": "./vendor/bin/ecs",
         "cs:fix": "./vendor/bin/ecs --fix",
         "rc": "./vendor/bin/rector --dry-run",
@@ -59,6 +60,7 @@
         "sa:baseline": "./vendor/bin/psalm --set-baseline=psalm-baseline.xml"
     },
     "scripts-descriptions": {
+        "ark": "Check archiecture boundary (phparkitect)",
         "cs": "Check php coding style",
         "cs:fix": "Fix php coding style",
         "rc": "Check rector rules",
